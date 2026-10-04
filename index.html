@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Bố cục trang web cơ bản với Div và CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Vùng chứa toàn bộ nội dung của trang (#main) -->
+    <div id="main">
+
+        <!-- 2. Vùng đầu trang (#head): Logo & Banner -->
+        <div id="head">
+            <h1>Logo & Banner</h1>
+        </div>
+
+        <!-- 3. Vùng liên kết đầu trang (#head-link) -->
+        <div id="head-link">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Khung bao 3 cột chính để xử lý float (Clearfix) -->
+        <div class="content-wrapper">
+            <!-- 4. Vùng bên trái (#left): Menu liên kết bên trái -->
+            <div id="left">
+                <h3>Menu bên trái</h3>
+                <ul>
+                    <li><a href="#">Tin tức mới</a></li>
+                    <li><a href="#">Thời khóa biểu</a></li>
+                    <li><a href="#">Thông báo học vụ</a></li>
+                    <li><a href="#">Thư viện điện tử</a></li>
+                </ul>
+            </div>
+
+            <!-- 5. Vùng nội dung chính (#content): Tin tức, bài viết, slide -->
+            <div id="content">
+                <h2>Nội dung chính (Content)</h2>
+                <div class="article-box">
+                    <h4>Hot News / Photo Slide</h4>
+                    <p>Khu vực hiển thị các tin tức tiêu điểm và hình ảnh trình chiếu chính của trường học / tổ chức.</p>
+                </div>
+                <div class="article-box">
+                    <h4>News 1: Khai giảng khóa đào tạo lập trình Web</h4>
+                    <p>Trang bị các kỹ năng cốt lõi về cấu trúc HTML5, CSS layout và rèn luyện tư duy lập trình giao diện.</p>
+                </div>
+            </div>
+
+            <!-- 6. Vùng bên phải (#right): Tiện ích, lịch, biểu đồ -->
+            <div id="right">
+                <h3>Thông tin phụ (Right)</h3>
+                <div class="widget-box">
+                    <h4>Lịch sự kiện</h4>
+                    <p>Hội thảo công nghệ: 15/10</p>
+                </div>
+                <div class="widget-box">
+                    <h4>Bản đồ</h4>
+                    <p>Khuôn viên trung tâm đào tạo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Vùng cuối trang (#footer): Bản quyền & liên hệ -->
+        <div id="footer">
+            <p>&copy; 2026 Bản quyền thuộc về Web Academy. Mọi quyền được bảo lưu.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
