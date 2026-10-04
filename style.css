@@ -1,0 +1,189 @@
+/* Thiết lập font chữ và reset căn lề toàn trang */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/* 1. Bộ chọn #main: Cố định độ rộng 960px và căn giữa màn hình */
+#main {
+    width: 960px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 2. Bộ chọn #head: Chiều cao, màu nền, đường viền và khoảng cách */
+#head {
+    height: 120px;
+    background-color: #2b6cb0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #1a365d;
+    margin-bottom: 5px;
+}
+
+#head h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* 3. Bộ chọn #head-link: Phân vùng thanh menu liên kết đầu trang */
+#head-link {
+    height: 40px;
+    background-color: #2d3748;
+    margin-bottom: 10px;
+}
+
+#head-link ul {
+    list-style: none;
+    display: flex;
+}
+
+#head-link ul li a {
+    display: block;
+    line-height: 40px;
+    padding: 0 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+#head-link ul li a:hover {
+    background-color: #4a5568;
+}
+
+/* Xử lý Clearfix cho khung chứa 3 cột để giữ chiều cao chính xác cho #main */
+.content-wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 4. Bộ chọn #left: Độ rộng 200px, min-height 400px, float sang trái */
+#left {
+    width: 200px;
+    min-height: 400px;
+    float: left;
+    background-color: #edf2f7;
+    padding: 15px;
+    border-right: 1px solid #e2e8f0;
+}
+
+#left h3 {
+    font-size: 16px;
+    color: #2b6cb0;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #cbd5e0;
+}
+
+#left ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+#left ul li {
+    margin-bottom: 10px;
+}
+
+#left ul li a {
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#left ul li a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+
+/* 5. Bộ chọn #content: Cột nội dung chính giữa (width 540px, float: left) */
+#content {
+    width: 540px;
+    min-height: 400px;
+    float: left;
+    background-color: #ffffff;
+    padding: 15px 20px;
+}
+
+#content h2 {
+    font-size: 20px;
+    color: #1a202c;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.article-box {
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.article-box h4 {
+    color: #2b6cb0;
+    margin-bottom: 6px;
+}
+
+/* 6. Bộ chọn #right: Cột thông tin phụ bên phải (width 220px, float: right) */
+#right {
+    width: 220px;
+    min-height: 400px;
+    float: right;
+    background-color: #edf2f7;
+    padding: 15px;
+    border-left: 1px solid #e2e8f0;
+}
+
+#right h3 {
+    font-size: 16px;
+    color: #2b6cb0;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #cbd5e0;
+}
+
+.widget-box {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+.widget-box h4 {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.widget-box p {
+    font-size: 13px;
+    color: #718096;
+}
+
+/* 7. Bộ chọn #footer: Phân vùng chân trang (clear float và nằm cố định ở đáy) */
+#footer {
+    height: 50px;
+    background-color: #2d3748;
+    color: #cbd5e0;
+    text-align: center;
+    line-height: 50px;
+    font-size: 13px;
+    border-top: 2px solid #1a202c;
+}
